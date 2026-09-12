@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Python Engineer - AI Startup",
+    "url": "https://example.com/jobs/python-engineer",
+    "snippet": "AI startup based in Germany hiring Python engineers.",
+    "source": "sample"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "url": "https://example.com/jobs/ml-engineer",
+    "snippet": "Machine learning company in France hiring engineers.",
+    "source": "sample"
+  },
+  {
+    "title": "Python Backend Developer",
+    "url": "https://example.com/jobs/python-backend",
+    "snippet": "Technology startup in the Netherlands looking for Python developers.",
+    "source": "sample"
+  },
+  {
+    "title": "Frontend Developer",
+    "url": "https://example.com/jobs/frontend",
+    "snippet": "Frontend developer position at a technology company in Spain.",
+    "source": "sample"
+  },
+  {
+    "title": "AI Research Scientist",
+    "url": "https://example.com/jobs/ai-research",
+    "snippet": "AI research company in Germany looking for machine learning researchers.",
+    "source": "sample"
+  }
+]
