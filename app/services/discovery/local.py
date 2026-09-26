@@ -3,6 +3,7 @@ from pathlib import Path
 
 from .base import DiscoveryProvider
 
+from app.models.source import ResearchSource
 
 class LocalDiscoveryProvider(DiscoveryProvider):
 
@@ -29,13 +30,18 @@ class LocalDiscoveryProvider(DiscoveryProvider):
             )
 
             if score > 0:
-                results.append({
-                    **item,
-                    "score": score
-                })
+                results.append(
+                    ResearchSource(
+                        title=item.get("title", ""),
+                        url=item.get("url", ""),
+                        snippet=item.get("snippet", ""),
+                        source=item.get("source", ""),
+                        score=score,
+                    )
+                )
 
         results.sort(
-            key=lambda x: x["score"],
+            key=lambda x: x.score,
             reverse=True
         )
 
