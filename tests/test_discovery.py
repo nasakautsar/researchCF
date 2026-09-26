@@ -1,5 +1,6 @@
 from app.services.discovery.local import LocalDiscoveryProvider
 from app.pipeline.discovery import DiscoveryPipeline
+from app.services.discovery.remote_ok import RemoteOKDiscoveryProvider
 
 
 def test_local_discovery():
@@ -30,3 +31,15 @@ def test_discovery_pipeline():
 
     assert isinstance(results, list)
     assert len(results) > 0
+
+def test_remote_ok_discovery():
+    provider = RemoteOKDiscoveryProvider()
+
+    results = provider.search(
+        "python",
+        limit=5
+    )
+
+    assert isinstance(results, list)
+    assert len(results) > 0
+    assert all(item.url for item in results)
