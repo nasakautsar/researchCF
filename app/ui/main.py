@@ -1,7 +1,7 @@
 import streamlit as st
 
 from app.pipeline.discovery import DiscoveryPipeline
-from app.services.discovery.local import LocalDiscoveryProvider
+from app.services.discovery.remote_ok import RemoteOKDiscoveryProvider
 
 
 st.set_page_config(
@@ -25,9 +25,7 @@ if st.button("Search"):
     if not query.strip():
         st.warning("Please enter a search query.")
     else:
-        provider = LocalDiscoveryProvider(
-            "data/sample/sources.json"
-        )
+        provider = RemoteOKDiscoveryProvider()
 
         pipeline = DiscoveryPipeline(provider)
 
